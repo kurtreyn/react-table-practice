@@ -30,3 +30,21 @@ export const COLUMNS = [
     accessor: 'phone',
   },
 ];
+
+export const COLUMNS_ALT = [
+  {
+    Header: 'First Name',
+    Footer: 'First Name',
+    accessor: 'first_name',
+  },
+  {
+    Header: 'Last Name',
+    Footer: 'Last Name',
+    accessor: 'last_name',
+  },
+  {
+    Header: 'Date of Birth',
+    Footer: 'Date of Birth',
+    accessor: 'date_of_birth',
+  },
+];

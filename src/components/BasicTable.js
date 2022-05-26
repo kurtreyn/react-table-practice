@@ -1,12 +1,13 @@
 import React, { useMemo } from 'react';
 import { useTable } from 'react-table';
 import MOCK_DATA from '../data/MOCK_DATA.json';
-import { COLUMNS } from './columns';
+import { COLUMNS, COLUMNS_ALT } from './columns';
 import './table.css';
 
 function BasicTable({ tableData }) {
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
+  const columnsAlt = useMemo(() => COLUMNS_ALT, []);
 
   const {
     getTableProps,
@@ -16,7 +17,8 @@ function BasicTable({ tableData }) {
     rows,
     prepareRow,
   } = useTable({
-    columns,
+    // columns,
+    columns: columnsAlt,
     data,
   });
 
