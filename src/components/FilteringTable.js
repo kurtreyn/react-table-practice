@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { GlobalFilter } from './GlobalFilter';
-import { useTable, useGlobalFilter } from 'react-table';
+import { useTable, useGlobalFilter, useFilters } from 'react-table';
 import MOCK_DATA from '../data/MOCK_DATA.json';
 import { COLUMNS, COLUMNS_ALT, GROUPED_COLUMNS } from './columns';
 // import './table.css';
@@ -28,6 +28,7 @@ function FilteringTable({ tableData }) {
       // columns: groupedColumns,
       data,
     },
+    useFilters,
     useGlobalFilter
   );
 
@@ -41,7 +42,10 @@ function FilteringTable({ tableData }) {
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                <th {...column.getHeaderProps()}>
+                  {column.render('Header')}
+                  <div>{column.canFilter ? column.render('Filter') : null}</div>
+                </th>
               ))}
             </tr>
           ))}
