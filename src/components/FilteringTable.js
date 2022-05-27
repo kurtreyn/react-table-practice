@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { GlobalFilter } from './GlobalFilter';
+import { ColumnFilter } from './ColumnFilter';
 import { useTable, useGlobalFilter, useFilters } from 'react-table';
 import MOCK_DATA from '../data/MOCK_DATA.json';
 import { COLUMNS, COLUMNS_ALT, GROUPED_COLUMNS } from './columns';
@@ -11,6 +12,14 @@ function FilteringTable({ tableData }) {
   // const columnsAlt = useMemo(() => COLUMNS_ALT, []);
   // const groupedColumns = useMemo(() => GROUPED_COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
+
+  // set properties to be applied to all columns
+  const defaultColumn = useMemo(
+    () => ({
+      Filter: ColumnFilter,
+    }),
+    []
+  );
 
   const {
     getTableProps,
@@ -27,6 +36,7 @@ function FilteringTable({ tableData }) {
       // columns: columnsAlt,
       // columns: groupedColumns,
       data,
+      defaultColumn,
     },
     useFilters,
     useGlobalFilter
