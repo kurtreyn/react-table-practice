@@ -3,6 +3,7 @@ import BasicTable from './BasicTable';
 import SortingTable from './SortingTable';
 import Table from './Table';
 import FilteringTable from './FilteringTable';
+import PaginationTable from './PaginationTable';
 
 function Child({ tableData }) {
   return (
@@ -10,7 +11,8 @@ function Child({ tableData }) {
       <div>
         {/* <BasicTable tableData={tableData} /> */}
         {/* <SortingTable tableData={tableData} /> */}
-        <FilteringTable tableData={tableData} />
+        {/* <FilteringTable tableData={tableData} /> */}
+        <PaginationTable tableData={tableData} />
       </div>
     </div>
   );
