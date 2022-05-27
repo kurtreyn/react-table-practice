@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 export const GROUPED_COLUMNS = [
   {
     Header: 'Id',
@@ -63,6 +65,7 @@ export const COLUMNS = [
     Header: 'Date of Birth',
     Footer: 'Date of Birth',
     accessor: 'date_of_birth',
+    Cell: ({ value }) => format(new Date(value), 'MM/dd/yyyy'),
   },
   {
     Header: 'Country',

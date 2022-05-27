@@ -7,8 +7,8 @@ import './table2.css';
 
 function BasicTable({ tableData }) {
   const columns = useMemo(() => COLUMNS, []);
-  const columnsAlt = useMemo(() => COLUMNS_ALT, []);
-  const groupedColumns = useMemo(() => GROUPED_COLUMNS, []);
+  // const columnsAlt = useMemo(() => COLUMNS_ALT, []);
+  // const groupedColumns = useMemo(() => GROUPED_COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
 
   const {
