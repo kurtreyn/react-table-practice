@@ -7,6 +7,7 @@ import PaginationTable from './PaginationTable';
 import RowSelection from './RowSelection';
 import ColumnOrder from './ColumnOrder';
 import ColumnHiding from './ColumnHiding';
+import StickyColumns from './StickyColumns';
 
 function Child({ tableData }) {
   return (
@@ -18,7 +19,8 @@ function Child({ tableData }) {
         {/* <PaginationTable tableData={tableData} /> */}
         {/* <RowSelection tableData={tableData} /> */}
         {/* <ColumnOrder tableData={tableData} /> */}
-        <ColumnHiding tableData={tableData} />
+        {/* <ColumnHiding tableData={tableData} /> */}
+        <StickyColumns tableData={tableData} />
       </div>
     </div>
   );
