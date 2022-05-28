@@ -5,6 +5,7 @@ import Table from './Table';
 import FilteringTable from './FilteringTable';
 import PaginationTable from './PaginationTable';
 import RowSelection from './RowSelection';
+import ColumnOrder from './ColumnOrder';
 
 function Child({ tableData }) {
   return (
@@ -14,7 +15,8 @@ function Child({ tableData }) {
         {/* <SortingTable tableData={tableData} /> */}
         {/* <FilteringTable tableData={tableData} /> */}
         {/* <PaginationTable tableData={tableData} /> */}
-        <RowSelection tableData={tableData} />
+        {/* <RowSelection tableData={tableData} /> */}
+        <ColumnOrder tableData={tableData} />
       </div>
     </div>
   );
